@@ -1,1 +1,14 @@
 git clone git@github.com:IrisVP/trial_exam.git
+nano exercise2.txt
+mv exercise1.txt  trial_exam/
+cd trial_exam/
+git status
+git add exercise1.txt
+git commit -m "added exercise1.txt file"
+git push
+nano exercise2.txt
+git status
+git add exercise2.txt
+git commit -m "added exercise2.txt"
+git push
+
