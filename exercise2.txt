@@ -1,0 +1,20 @@
+
+UNF
+	db(staffNo, dentistName, patientNo, patientName, [date, time], surgeryNo)
+	this is the unnormalized form.
+1NF
+	db(*staffNo*, dentistName, patientNo, patientName, *app-date*, app-time, surgeryNo)
+	In the first normal form, there are no repeating groups and nested columns are seperated.
+	The primary key is depicted with asterices.
+
+2NF
+	staff(*staffNo*, dentistName)
+	db(*staffNo*, patientNo, *app-date*, app-time)
+	patient(*patientNo*, patientName, surgeryNo)
+	Dentistname is dependent on staffNo so this can be detached from the main table.
+	PatientName and surgery number are both dependent on patientNo so can be detached.
+3NF = 2NF
+	staff(*staffNo*, dentistName)
+        db(*staffNo*, patientNo, *app-date*, app-time)
+        patient(*patientNo*, patientName, surgeryNo)
+	no transitive dependencies
