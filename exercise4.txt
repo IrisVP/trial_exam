@@ -16,4 +16,11 @@ select sum(price), room.hotelno, room.type from room join booking on room.hoteln
 6)
 select * from booking where datefrom like "%-08-%" or dateto like "%-08-%";
 
+7)
+select * from room join hotel on room.hotelno = hotel.hotelno where hotelname = "The Tower Hotel";
+
+8)
+select room.hotelno, room.roomno, guest.guestname, room.price from room join booking on room.hotelno = booking.hotelno join g
+uest on guest.guestno = booking.guestno where room.hotelno = "fb01";
+
 
