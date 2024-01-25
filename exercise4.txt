@@ -1,0 +1,19 @@
+1)
+select * from guest where guestaddress rlike "London" order by guestname;
+
+2)
+select * from room where type != "single" and price < 40.00 order by price;
+
+3)
+select * from  booking where dateto is null;
+
+4)
+select avg(price) from room;
+
+5)
+select sum(price), room.hotelno, room.type from room join booking on room.hotelno=booking.hotelno where type = "double" group by room.hotelno;
+
+6)
+select * from booking where datefrom like "%-08-%" or dateto like "%-08-%";
+
+
